@@ -1,3 +1,5 @@
+import 'package:bloc_basic/bloc/ui.dart';
+import 'package:bloc_basic/todo/todo.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,5 +13,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Text("Home"),
+      // home:  Counterclass(),
+      debugShowCheckedModeBanner: false,
+      //set up the whole app bar color as yellow
+      theme: ThemeData(
+        primaryColor: Colors.yellow
+      ),
+      home: ToDoListClass(),
+      
     );}}
