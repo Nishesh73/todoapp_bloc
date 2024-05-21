@@ -29,7 +29,7 @@ class HiveDatabase {
     mybox.put("TODOLIST",
         todo); //todo list all data will be stored in mybox's TODOLIST
   }
-
+  //it will delete whole data from database donot use below code
   //  void deleteFromDatabse(int index){
   //   // mybox.delete("TODOLIST");it will delete all data
   //   //logic first delete the data from todolist, then put that inside the hive storage work

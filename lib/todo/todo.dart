@@ -14,11 +14,14 @@ class ToDoListClass extends StatefulWidget {
 class _ToDoListClassState extends State<ToDoListClass> {
   //access the todoList
   HiveDatabase hD = HiveDatabase();
+  //the blinking of emulator's screen due to the emulator not due to my code
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
     var mybox = Hive.box("mybox");
+    //first time ever when the app is open at the time mybox's "TODOLIST" key has
+    //null value, if it is not the first then loadData() method will run
     if (mybox.get("TODOLIST") == null) {
       hD.todo;
     } else {
@@ -53,6 +56,7 @@ class _ToDoListClassState extends State<ToDoListClass> {
       controller.text,
       false
     ]); //i added not data inside list but list inside list of data
+    controller.clear();
     Navigator.of(context).pop();
     setState(() {});
 
